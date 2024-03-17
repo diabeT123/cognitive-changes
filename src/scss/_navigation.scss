@@ -1,0 +1,39 @@
+.navigation {
+background: $dark;
+padding: 200px 0 100px 0;
+}
+.navigation__list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.navigation__item {
+    max-width: 350px;
+    padding: 24px;
+    background: $light;
+
+    &:first-child
+    {
+        padding: 0;
+        background: transparent;
+        color: $light;
+    }
+}
+.navigation__link {
+}
+.navigation__title {
+    font-size: 52px ;
+    line-height: 1.2em;
+}
+.navigation__link-number {
+    font-size: 64px;
+    margin-bottom: 40px;
+    font-family: Neucha;
+
+}
+.navigation__link-title {
+    margin-bottom: 16px;
+    color: $base;
+}
+.navigation__link-text {
+}

@@ -97,6 +97,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.2em;
 }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  color: #fe8a02;
+}
 
 h1 {
   font-size: 72px;
@@ -115,10 +118,14 @@ p {
   line-height: 1.6em;
 }
 
+span, a {
+  display: block;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -137,6 +144,90 @@ p {
 }
 .button:hover {
   background: #42413c;
+}
+
+.title {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #908d8b;
+}
+
+.howItManifests__title {
+  text-transform: uppercase;
+  color: #fff;
+  background: #b09a81;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.howItManifests__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.repeatSection-image {
+  background: #fff;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.3));
+}
+
+.repeatSection-text {
+  font-family: Neucha;
+  font-size: 34px;
+  line-height: 1.2em;
+}
+
+.repeatSection-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.repeatSection {
+  padding: 100px;
+  position: relative;
+  z-index: 1;
+}
+.repeatSection::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/background.png");
+  opacity: 10%;
+  z-index: -1;
+}
+
+.repeatSection--brown {
+  background: #b09a81;
+}
+.repeatSection--brown .repeatSection-inner {
+  flex-direction: row-reverse;
+}
+.repeatSection--brown .repeatSection-text {
+  color: #fff;
+}
+.repeatSection--brown .title {
+  color: #fff;
+}
+.repeatSection--brown .subtitle {
+  color: #d7ccc0;
+}
+.repeatSection--brown .howItManifests__title {
+  background: #fff;
+  color: #b09a81;
+}
+.repeatSection--brown .howItManifests__text {
+  color: #fff;
 }
 
 .hero {
@@ -178,4 +269,140 @@ p {
 
 .hero__text {
   margin-bottom: 40px;
+}
+
+.video {
+  background: #fff;
+  padding: 100px 0 0 0;
+  margin-bottom: -100px;
+}
+
+.video__title {
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.video__text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.video__container {
+  display: flex;
+  justify-content: center;
+}
+.video__container iframe {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.navigation {
+  background: #2a2626;
+  padding: 200px 0 100px 0;
+}
+
+.navigation__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.navigation__item {
+  max-width: 350px;
+  padding: 24px;
+  background: #f5f4f0;
+}
+.navigation__item:first-child {
+  padding: 0;
+  background: transparent;
+  color: #f5f4f0;
+}
+
+.navigation__title {
+  font-size: 52px;
+  line-height: 1.2em;
+}
+
+.navigation__link-number {
+  font-size: 64px;
+  margin-bottom: 40px;
+  font-family: Neucha;
+}
+
+.navigation__link-title {
+  margin-bottom: 16px;
+  color: #fe8a02;
+}
+
+.footer {
+  background: #fff;
+  padding: 100px 0 110px 0;
+  color: #fff;
+}
+
+.footer__mail-section {
+  background: #42413c;
+  padding: 40px 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.footer__mail-section span:nth-child(1) {
+  font-size: 18px;
+}
+.footer__mail-section span:nth-child(3) {
+  font-size: 12px;
+}
+.footer__mail-section span:nth-child(3) a {
+  text-decoration: underline;
+  display: inline;
+}
+
+.footer__input-block {
+  max-width: 485px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__input-container {
+  display: flex;
+  align-items: stretch;
+}
+
+.footer__input-icon-container {
+  background: #fe8a02;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__input {
+  width: 100%;
+  padding: 18px 15px;
+  position: relative;
+}
+.footer__input::-moz-placeholder {
+  color: #908d8b;
+}
+.footer__input::placeholder {
+  color: #908d8b;
+}
+
+.footer_copyright-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #2a2626;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 76px;
+  line-height: 1.6em;
+}
+.footer_copyright-section a {
+  display: inline;
+  color: #1085c5;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

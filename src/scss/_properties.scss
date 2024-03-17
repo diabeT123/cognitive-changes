@@ -61,6 +61,10 @@ h1,h2,h3,h4,h5,h6
     font-family: Neucha;
     font-weight: 400;
     line-height: 1.2em;
+    span
+    {
+        color: $base;
+    }
 }
 h1{
     font-size: 72px;
@@ -75,12 +79,15 @@ p{
     color: $dark;
     line-height: 1.6em;
 }
+span,a{
+    display: block;
+}
 
 .wrapper
 {
     width: 100%;
     height: 100%;;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .container  
 {
@@ -101,4 +108,105 @@ p{
         background: $basedDark;
     }
 }
+.title{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.subtitle
+{
+    font-size: 24px;
+    color: $halfOpacityDarkColor;
+}
 
+.howItManifests {
+    &__title {
+        text-transform: uppercase;
+        color: $whitecolor;
+        background: $brown;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    &__item {
+    }
+    &__text {
+    }
+}
+
+.repeatSection-image
+{
+    background: $whitecolor;
+    filter: drop-shadow(0 16px 32px rgba(0 0 0 / 30%));
+}
+.repeatSection-text
+{
+    font-family: Neucha;
+    font-size: 34px;
+    line-height: 1.2em;
+}
+.repeatSection-inner
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+.repeatSection
+{
+    padding: $sectionPadding;
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../images/background.png");
+        opacity: 10%;
+        z-index:-1;
+    }
+}
+
+.repeatSection--brown
+{
+    
+    background: $brown;
+    
+    .repeatSection-inner
+    {
+        flex-direction: row-reverse;
+    }
+    .repeatSection-text{
+        color: $whitecolor;
+    }
+    .title
+    {
+        color: $whitecolor;
+
+    }
+    .subtitle
+    {
+        color: $halfOpacityWhiteColor;
+    }
+    .howItManifests
+    {
+        &__title{
+            background: $whitecolor;
+            color: $brown;
+        }
+        &__text
+        {
+            color: $whitecolor;
+        }
+    }
+}
