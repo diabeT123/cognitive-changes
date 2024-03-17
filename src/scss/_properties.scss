@@ -27,6 +27,8 @@ $halfOpacityDarkColor:#908d8b;
 $brown: #b09a81;
 $blue: #1085c5;
 
+$sectionPadding: 100px;
+
 
 @font-face {
     font-family: "Open Sans";
@@ -52,6 +54,7 @@ html
     line-height: 1.6em ;
     color: #2A2626;
     font-family: Open Sans;
+    font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6
 {
@@ -68,7 +71,10 @@ h2{
 h3{
     font-size: 34px;
 }
-
+p{
+    color: $dark;
+    line-height: 1.6em;
+}
 
 .wrapper
 {
@@ -83,3 +89,16 @@ h3{
     margin: 0 auto;
 }
   
+.button {
+    background: $base;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $whitecolor;
+    padding: 12px 24px;
+    transition: all .3s;
+    &:hover
+    {
+        background: $basedDark;
+    }
+}
+
