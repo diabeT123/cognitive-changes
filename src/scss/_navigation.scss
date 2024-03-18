@@ -11,12 +11,21 @@ padding: 200px 0 100px 0;
     max-width: 350px;
     padding: 24px;
     background: $light;
-
+    transition: all .3s;
     &:first-child
     {
         padding: 0;
         background: transparent;
         color: $light;
+        &:hover
+        {
+            transform: translateY(0);
+
+        }
+    }
+    &:hover
+    {
+        transform: translateY(-5%);
     }
 }
 .navigation__link {
